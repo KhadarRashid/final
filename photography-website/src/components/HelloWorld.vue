@@ -99,6 +99,7 @@
     name: "HelloWorld", 
     data() {
       return {
+        // setting all the boxes to empty strings so that we canadd data to them
         name: "",
         email: "",
         number: "",
@@ -109,6 +110,7 @@
       }
     },
     mounted () {
+      // Found on stack overflow how to validate and make sure the date is not i the past
       window.addEventListener("onload", function() {
       var today = new Date();
       var dd = today.getDate();
@@ -125,12 +127,13 @@
       today = yyyy+'-'+mm+'-'+dd;
     })
   
-
+    // the glider that handles the speed and the number of previews
     new Glide('.glide', {autoplay: 2000, type: 'carousel', perView: 3 } ).mount()
     },
     methods: {
-
+      // captured from the v-binds next to the tectboxes. Adding all the information to one variable
       clientFormSubmit() {
+        
         let clientData = {
 
         name: this.name,
@@ -142,7 +145,7 @@
         }
 
         let errors = []
-        // If statements to handle validation. No need to over complicate stuff
+        // If statements to handle validation.
         if (!this.name){
             errors.push("I gotta know your name!")
         }
@@ -168,11 +171,10 @@
             alert(errorMsg)
             return
         }
-        location.reload() // reloads the page
+        location.reload() // reloads the page 
     }
   }
 
-        // Setting them all as values
 }
 
 </script>

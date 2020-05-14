@@ -3,7 +3,7 @@
   <div id="app">
     <head>      
       <!-- Glide.js -->
-      
+
      <link src="https://unpkg.com/@glidejs/glide@3.2.3/dist/glide.min.js">
       </head>
     <HelloWorld v-on:newClientAdded="newClientAdded" />
@@ -19,12 +19,13 @@ export default {
     HelloWorld
   },
   methods: {
+    // method ro add the clients using the $client_api and a catch block to catch any errors
     newClientAdded(client) {
       this.$client_api.addClient(client).then( (client) => {
         
       }).catch( err => {
         let message = err.response.data.join(",")
-        alert("Error adding student, ", message)
+        alert("Error adding client, ", message)
       })
     }
   }

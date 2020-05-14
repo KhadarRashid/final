@@ -5,12 +5,7 @@ let Client = db.Client
 
 var router = express.Router() 
 
-// router.get('/clients', function(req, res, next){
-//     Client.findAll( { order: ["name"] } ).then( clients => {
-//         return res.json(clients)
-//     })
-// })
-
+// This part handles the posting of the clients and has error handling in case something goes awry
 router.post('/clients', function(req, res, next){
     Client.create( req.body ).then( (data) => {
         return res.status(201).send('success')

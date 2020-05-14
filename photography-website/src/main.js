@@ -8,9 +8,10 @@ import ClientAPIService from "@/services/ClientService"
 
 Vue.config.productionTip = false
 
-
+// setting up $client_api to be used on the rest of the project
 Vue.prototype.$client_api = ClientAPIService
 
+// usinging the imported glide.js
 Vue.use(Glide)
 
 import "vue-glide-js/dist/vue-glide.css"
