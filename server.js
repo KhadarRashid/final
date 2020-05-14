@@ -5,6 +5,9 @@ let api_routes = require("./routes/api.js")
 
 let app = express()
 
+app.use(express.static(path.join(__dirname, "photography-website", "dist" )))
+
+
 app.use(bodyParser.json())
 
 app.use("/api", api_routes)
