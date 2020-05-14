@@ -1,0 +1,12 @@
+.jumbotron {
+    color: rgb(57,90,92);
+    background-image: linear-gradient(to bottom right, rgb(189,217,214), rgb(248, 248, 248));
+   
+}
+
+/* rgb(57,90,92); text  */
+
+#gradient-font { 
+    font-family: 'Atma', cursive;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255),rgb(121,168,167));
+} 
